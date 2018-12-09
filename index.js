@@ -38,14 +38,15 @@ bot.on('ready', function() {
     console.log(bot.user.username);
 });
 bot.on('message', function(message) {
-    if (message.content === "$loop") { 
+    if (message.content === "$loop") {
         var interval = setInterval (function () {
             if (j % 2 == 0) {
                 i = Math.floor((Math.random() * maximum) + 1);
                 console.log(i);
-                message.channel.send(aled[i]) 
+                message.channel.send(aled[i])
             .catch(console.error);
             }
-        }, 1 * 1000); 
+        }, 1 * 1000);
     }
 });
+bot.login(process.env.BOT_TOKEN);
